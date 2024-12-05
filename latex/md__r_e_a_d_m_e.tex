@@ -1,0 +1,69 @@
+\chapter{Chants Adventure Game}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Chants Adventure Game@{Chants Adventure Game}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+
+\begin{DoxyItemize}
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+By Kyle St. Clair
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+CSCI-\/207-\/01 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{How To Run The Project}{How To Run The Project}}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Ensure that your current directory is the project folder.
+\item Run the following commands in your terminal\+:
+\item 1. cmake -\/S . -\/B build
+\item 2. cmake --build build
+\item 3. ./build/app/chants\+\_\+adventure
+\item (Omit the quotation marks) 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysubsection{\texorpdfstring{Project Overview}{Project Overview}}\label{md__r_e_a_d_m_e_autotoc_md2}
+This project implements a text-\/based adventure game in C++. Players navigate a 20-\/node map, collect items, and aim to reach the Treasure Room with the Golden Key to win. The game integrates a simple inventory system, item inspection, and path exploration to create an engaging gameplay experience. \hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsection{\texorpdfstring{Features}{Features}}\label{md__r_e_a_d_m_e_autotoc_md3}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsubsection{\texorpdfstring{Game Map}{Game Map}}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyItemize}
+\item A 20-\/node game map with unique descriptions and connections.
+\item Logical paths allow exploration toward the goal.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{Item Management}{Item Management}}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyItemize}
+\item Items like the Golden Key and other optional collectibles can be found and added to the player’s inventory.
+\item Players can inspect items to view detailed descriptions.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{Gameplay Loop}{Gameplay Loop}}\label{md__r_e_a_d_m_e_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Players choose paths to travel between locations.
+\item Action options include moving, picking up items, and inspecting inventory.
+\item The game ends when players reach the Treasure Room with the Golden Key or lose by running out of turns or entering dangerous locations like the Volcano. 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsubsection{\texorpdfstring{Code Implementation}{Code Implementation}}\label{md__r_e_a_d_m_e_autotoc_md7}
+
+\begin{DoxyItemize}
+\item Node\+: Represents individual locations on the map. Stores connections, descriptions, and items.
+\item Asset\+: Represents collectible items that players can pick up and inspect.
+\item game.\+cpp\+: Coordinates the gameplay loop, handles player actions, and implements game rules. 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{\texorpdfstring{References}{References}}\label{md__r_e_a_d_m_e_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Game Design Inspiration\+: Any boardgame ever
+\item Coding Resources\+: C++ documentation and forums provided best practices for implementing classes and managing vectors. 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{\texorpdfstring{Challenges}{Challenges}}\label{md__r_e_a_d_m_e_autotoc_md9}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsubsection{\texorpdfstring{Path Connections\+:}{Path Connections\+:}}\label{md__r_e_a_d_m_e_autotoc_md10}
+
+\begin{DoxyItemize}
+\item Ensuring every node had at least two connections required careful mapping and testing. Some nodes initially became inaccessible due to logical oversights. 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysubsubsection{\texorpdfstring{Memory Management\+:}{Memory Management\+:}}\label{md__r_e_a_d_m_e_autotoc_md11}
+
+\begin{DoxyItemize}
+\item Proper cleanup of dynamically allocated objects like nodes and assets was crucial to avoid memory leaks. 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysubsubsection{\texorpdfstring{Inspect Functionality\+:}{Inspect Functionality\+:}}\label{md__r_e_a_d_m_e_autotoc_md12}
+
+\begin{DoxyItemize}
+\item Debugging the inventory inspection feature to ensure item descriptions displayed correctly without disrupting the gameplay flow. 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysubsection{\texorpdfstring{Future Improvements}{Future Improvements}}\label{md__r_e_a_d_m_e_autotoc_md13}
+
+\begin{DoxyItemize}
+\item Add interactive features like battling monsters or dropping items.
+\item Enhance map design with additional branching paths and hidden areas.
+\item Improve the user interface with clearer feedback for player actions and a mini-\/map.
+\item Add save and load functionality to allow players to continue their progress. 
+\end{DoxyItemize}
